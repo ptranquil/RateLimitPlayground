@@ -3,7 +3,7 @@ A collection of various rate-limiting methods implemented in code, serving as a 
 
 ## Algorithm
 
-1. [Token Bucket Algorithm](#token-bucket-algorithm)
+[Token Bucket Algorithm](#token-bucket-algorithm)
 
 ### Token Bucket Algorithm
 
