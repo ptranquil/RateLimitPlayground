@@ -11,7 +11,7 @@ app.use(tokenBucketRateLimitMiddleware); // Using Token Bucket Middleware for Re
 /*************** LEAKY BUCKET ALGORITHM ********************/
 //! Uncomment to use the desired algorithm
 // import { leakingBucketRateLimitMiddleware } from './Algorithms/leaky-bucket.js';
-// const leakingBucket = new leakingBucketRateLimitMiddleware(10,5000);
+// const leakingBucket = new leakingBucketRateLimitMiddleware(10,1);
 // app.use((req, res, next) => leakingBucket.handleThrottling(req, res, next));
 
 const PORT = process.env.PORT || 5000;

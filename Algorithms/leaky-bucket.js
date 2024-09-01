@@ -25,7 +25,7 @@ export class leakingBucketRateLimitMiddleware {
             res.set('X-Ratelimit-Remaining', this.bucketSize - this.leakingBucketQueue.length);
             next();
         } else {
-            res.status(429).set('X-RateLimit-Remaining', 0).set('Retry-After', 2).json({
+            res.status(429).set('X-RateLimit-Remaining', 0).set('Retry-After', leakRate).json({
                 success: false,
                 message: 'Too many requests'
             });
