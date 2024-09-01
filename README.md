@@ -3,8 +3,8 @@ A collection of various rate-limiting methods implemented in code, serving as a 
 
 ## Algorithm
 
-[Token Bucket Algorithm](#token-bucket-algorithm)
-[Leaky Bucket Algorithm](#leaky-bucket-algorithm)
+1. [Token Bucket Algorithm](#token-bucket-algorithm)
+2. [Leaky Bucket Algorithm](#leaky-bucket-algorithm)
 
 ### Token Bucket Algorithm
 
@@ -44,4 +44,4 @@ Also known as Leaking bucket algorithm
 - **Fixed Leak Rate**: Requests are processed (or leaked) from the bucket at a steady, fixed rate, ensuring that the system handles the requests at a controlled speed.
 - **Smoothing Traffic**:  The algorithm smooths out bursts of traffic by queuing excess requests and processing them at a constant rate.
 
->> _The Leaky Bucket algorithm is effective in controlling traffic by smoothing out bursty traffic patterns and ensuring a constant flow rate, preventing overload and maintaining network stability._
+> _The Leaky Bucket algorithm is effective in controlling traffic by smoothing out bursty traffic patterns and ensuring a constant flow rate, preventing overload and maintaining network stability._
