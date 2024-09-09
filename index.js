@@ -14,6 +14,14 @@ app.use(tokenBucketRateLimitMiddleware); // Using Token Bucket Middleware for Re
 // const leakingBucket = new leakingBucketRateLimitMiddleware(10,1);
 // app.use((req, res, next) => leakingBucket.handleThrottling(req, res, next));
 
+/*************** FIXED WINDOW ALGORITHM ********************/
+//! Uncomment to use the desired algorithm
+// import { FixedWindowRateLimiter } from './Algorithms/fixed-window-counter.js';
+// const rateLimiter = new FixedWindowRateLimiter(10, 60 * 1000); // Limit: 10 requests, Window size: 60 seconds
+
+// Apply the rate limiter middleware directly
+app.use(rateLimiter.getMiddleware());
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
